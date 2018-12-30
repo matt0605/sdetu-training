@@ -1,0 +1,8 @@
+
+
+Quiz 5 oop
+The most restricted access modifier is Private
+The process of binding public methods to access private properties is called Encapsulation
+Encapsulation uses get and set methods to define and retrieve values
+If we write a class A that inherits B, then we write: public class A extends B{}
+A class can implement more than one interface
