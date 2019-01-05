@@ -52,7 +52,7 @@ public class Student {
 
 	}
 
-	public void enroll( double enrollFee) {
+	public void enroll(double enrollFee) {
 		this.enrollFee = enrollFee;
 		System.out.println("Enrollment fee: " + enrollFee);
 
@@ -65,7 +65,7 @@ public class Student {
 	}
 
 	public void checkBalance() {
-		
+
 		this.balance = balance;
 		balance = enrollFee - payment;
 		System.out.println("Current Balance: " + balance);
@@ -74,11 +74,11 @@ public class Student {
 
 	public void showCourses(String[] course) {
 		System.out.println("Courses:");
-				int i = 0;
-				do {
-					System.out.println(course[i]);
-					i = i + 1;
-				} while (i < 4);
+		int i = 0;
+		do {
+			System.out.println(course[i]);
+			i = i + 1;
+		} while (i < 4);
 
 	}
 
@@ -109,6 +109,14 @@ public class Student {
 
 	public String getState() {
 		return state;
+
+	}
+
+	@Override
+	public String toString() {
+        System.out.println("Obtained by toString");
+		return String.format("%s\n" + "%s\n%s\n%s\n" + "%s\n%s\n%s\n%s\n" + "%.2f\n%.2f\n%.2f\n",
+				"***Student Database***", name, email, ssn, userId, phone, city, state, enrollFee, payment, balance);
 
 	}
 

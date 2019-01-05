@@ -19,6 +19,7 @@ public class StudentApp {
 		stu.enroll(5000.00);
 		stu.pay(2000.00);
 		stu.checkBalance();
+		System.out.println(stu.toString());
 		
 		
 		
