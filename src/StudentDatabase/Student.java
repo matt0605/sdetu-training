@@ -36,6 +36,16 @@ public class Student {
 		setEmail(name);
 	}
 
+	
+	public void setId (String ID) {
+		this.ID = ID;
+	
+	}
+	
+	public String getId() {
+		return ID;
+		
+	}
 	// create email address
 	public void setEmail(String name) {
 		// this.name = name;
@@ -78,7 +88,7 @@ public class Student {
 		do {
 			System.out.println(course[i]);
 			i = i + 1;
-		} while (i < 4);
+		} while (i < course.length);
 
 	}
 
@@ -115,8 +125,9 @@ public class Student {
 	@Override
 	public String toString() {
         System.out.println("Obtained by toString");
-		return String.format("%s\n" + "%s\n%s\n%s\n" + "%s\n%s\n%s\n%s\n" + "%.2f\n%.2f\n%.2f\n",
-				"***Student Database***", name, email, ssn, userId, phone, city, state, enrollFee, payment, balance);
+		return String.format("%s\n" + "%s%s\n%s%s\n%s%s\n" + "%s%s\n%s%s\n%s%s\n%s%s\n" + "%s%.2f\n%s%.2f\n%s%.2f\n",
+				"***Student Database***","Name: ", name, "Email: ",email, "SSN: ",ssn, "UserId: ",userId, "Phone: ",phone, "City: ",city, "State: ",state,
+				"Enrollment Fees: ",enrollFee, "Payment Made: ",payment, "Balance: ",balance);
 
 	}
 
