@@ -12,22 +12,25 @@ package StudentDatabase;
 public class Student {
 
 	// properties of Student
-
 	private static String name;
 	private static String email;
 	private static String ssn;
 	private static String ID;
 	private static String userId;
+	private static double enrollFee;
+	private static double payment;
+	private static double balance;
 
 	private String phone;
 	private String city;
 	private String state;
 
 	// Constructor takes name and ssn as argument
-
 	public Student(String name, String ssn) {
 		this.name = name;
 		this.ssn = ssn;
+		this.balance = balance;
+		balance = enrollFee;
 		System.out.println("Name: " + name);
 		System.out.println("SSN: " + ssn);
 		setEmail(name);
@@ -45,19 +48,27 @@ public class Student {
 	public void genUserId(String ID) {
 		int random = (int) Math.random() * 9000 + 1000;
 		userId = ID + random + ssn.substring(5, 9);
-		System.out.println(userId);
+		System.out.println("UserId: " + userId);
 
 	}
 
-	public void enroll() {
+	public void enroll( double enrollFee) {
+		this.enrollFee = enrollFee;
+		System.out.println("Enrollment fee: " + enrollFee);
 
 	}
 
-	public void pay(float f) {
+	public void pay(double payment) {
+		this.payment = payment;
+		System.out.println("Payment made: " + payment);
 
 	}
 
 	public void checkBalance() {
+		
+		this.balance = balance;
+		balance = enrollFee - payment;
+		System.out.println("Current Balance: " + balance);
 
 	}
 

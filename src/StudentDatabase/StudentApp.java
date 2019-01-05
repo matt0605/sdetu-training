@@ -16,6 +16,9 @@ public class StudentApp {
 		stu.setState("Georgia");
 		System.out.println("State: " + stu.getState());
 		stu.showCourses(course);
+		stu.enroll(5000.00);
+		stu.pay(2000.00);
+		stu.checkBalance();
 		
 		
 		
