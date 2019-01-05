@@ -5,8 +5,20 @@ public class StudentApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Student stu = new Student("john", "123456789");
+		String[] course = { "Course A", "Course B", "Course C", "Course D" };
+		
+		Student stu = new Student("John.Brown", "123456789");
 		stu.genUserId("10");
+		stu.setPhone("7705556666");
+		System.out.println("Phone: " + stu.getPhone());
+		stu.setCity("Atlanta");
+		System.out.println("City: " + stu.getCity());
+		stu.setState("Georgia");
+		System.out.println("State: " + stu.getState());
+		stu.showCourses(course);
+		
+		
+		
 
 	}
 
